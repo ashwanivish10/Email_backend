@@ -6,7 +6,7 @@ require("dotenv").config();
 const app = express();
 
 app.use(cors({
-  origin: 'http://ashwanivish10.github.io/Personal_Portfolio/'  // <-- Replace with your actual frontend domain here
+  origin: 'https://ashwanivish10.github.io/Personal_Portfolio/'  // <-- Replace with your actual frontend domain here
 }));
 
 app.use(express.json());
