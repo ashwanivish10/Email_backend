@@ -12,18 +12,11 @@ app.use(cors({
 app.use(express.json());
 
 
-// // File: sendEmail.js
-// require("dotenv").config();
-// const express = require("express");
-// const nodemailer = require("nodemailer");
-// const cors = require("cors");
 
-// const app = express();
-// app.use(cors());
-// app.use(express.json());
 
 app.post("/send", async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, subject, message } = req.body;
+
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
