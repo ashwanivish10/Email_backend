@@ -1,14 +1,26 @@
-
-
-// File: sendEmail.js
-require("dotenv").config();
+const cors = require("cors");
 const express = require("express");
 const nodemailer = require("nodemailer");
-const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://ashwanivish10.github.io/Personal_Portfolio/'  // <-- Replace with your actual frontend domain here
+}));
+
 app.use(express.json());
+
+
+// // File: sendEmail.js
+// require("dotenv").config();
+// const express = require("express");
+// const nodemailer = require("nodemailer");
+// const cors = require("cors");
+
+// const app = express();
+// app.use(cors());
+// app.use(express.json());
 
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
