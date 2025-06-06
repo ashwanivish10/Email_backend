@@ -33,8 +33,8 @@ app.post("/send", async (req, res) => {
     html: `
       <h3>You've received a new message from your Portfolio:</h3>
       <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Subject:</strong> ${subject}</p>
       <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Subject:</strong> ${subject}</p>
       <p><strong>Message:</strong></p>
       <p>${message}</p>
     `,
