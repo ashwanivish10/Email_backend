@@ -31,8 +31,9 @@ app.post("/send", async (req, res) => {
     to: process.env.EMAIL,
     subject: `New Message from ${name}`,
     html: `
-      <h3>You've received a new message from your website:</h3>
+      <h3>You've received a new message from your Portfolio:</h3>
       <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Subject:</strong> ${subject}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Message:</strong></p>
       <p>${message}</p>
